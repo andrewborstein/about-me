@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bjqs.css">
+<link rel="stylesheet" href="demo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="bjqs-1.3.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      
+      $('.about').click(function(e){
+        e.preventDefault;
+
+        // Active button
+        $(this).addClass('active');
+        $('.current').removeClass('active');
+        $('.seeking').removeClass('active');
+
+        // Display content
+        $('#about').toggle();
+        $('#current').hide();
+        $('#seeking').hide();
+      });
+      $('.current').click(function(e){
+
+        // Active button
+        $(this).addClass('active');
+        $('.about').removeClass('active');
+        $('.seeking').removeClass('active');
+
+        // Display content
+        e.preventDefault;
+        $('#about').hide();
+        $('#current').toggle();
+        $('#seeking').hide();
+      });
+      $('.seeking').click(function(e){
+        e.preventDefault;
+        
+        // Active button
+        $(this).addClass('active');
+        $('.current').removeClass('active');
+        $('.about').removeClass('active');
+
+        // Display content
+        $('#about').hide();
+        $('#current').hide();
+        $('#seeking').toggle();
+      });
+
+    });
+  </script>
+</head>
+
+  <body>
+    
+    <div class="content">
+    
+      <div class="intro center">
+        <h1>Andrew Borstein</h1>
+        <h5>Ambitious. Creative. Thoughtful.</h5>
+
+        <img src="me1.jpg" alt="Andrew Borstein" title="Andrew Borstein" class="me">
+        <img src="me2.jpg" alt="Andrew Borstein" title="Andrew Borstein" class="me top-right">
+        <img src="me3.jpg" alt="Andrew Borstein" title="Andrew Borstein" class="me bottom-left">
+
+        <p>Experienced front-end web developer, novice back-end engineer, occasionally-touring musician, and craft beer homebrewer.</p>    
+
+      </div>
+
+      <hr>
+
+      <h3 class="center">Click to learn more</h3>
+
+      <div class="buttons center">
+        <a class="btn about">About</a>
+        <a class="btn current">Currently</a>
+        <a class="btn seeking">Seeking</a>
+      </div>
+      
+      <div class="toggles">
+        <div id="about">
+          <p>
+          I've always been drawn to technology; first as a wide-eyed user, then a curious tinkerer, and now a <strong>designer and developer</strong>. Although the path that led me here has taken many twists and turns -
+          from professional touring and recording <strong>artist</strong>, to <strong>employee</strong> of the year, 
+          to dean's <strong>scholar</strong> at UPenn, to small business owner and <strong>entrepreneur</strong> - I've never stopped engaging my passion to <strong>help others and solve problems</strong>.
+          </p>
+        </div>
+
+        <div id="current">
+          <p>
+          Most days you can find me in a coffeeshop in Providence, 
+          running a small web design and development company called <a href="http://brownborgstudios.com" target="_blank">Brownborg Studios</a>. 
+          Once a week, I visit <a href="http://rhdri.org" target="_blank">RHD-RI</a> to work with a courageous young man with cerebral palsy on an 
+          <a href="http://equalaccessri.org" target="_blank">entrepreneurial endeavor</a> to improve handicap accessibility in RI. 
+          In the spare time that's left over, I enjoy collaborating on other creative projects, like 
+          marketing and branding with <a href="http://substantialbrand.com" target="_blank">Substantial Brand</a>, 
+          video filming, producing, and editing with <a href="http://lmproductions88.com" target="_blank">LMproductions</a>, and
+          building a soon-to-be-released web app with <a href="http://skatesomething.com" target="_blank">Skate Something</a>. 
+          I occasionally make music on stage with <a href="http://rxbanditsofficial.com" target="_blank">these dudes</a>, 
+          at a local club with <a href="http://djpaulydanger.com" target="_blank">this guy</a>, 
+          or at a wedding under <a href="http://abovethecloudsent.com" target="_blank">this name</a>. 
+          I also make an award winning <strong>Belgian Pale Ale.</strong>
+          </p> 
+        </div>
+
+        <div id="seeking">
+          <p>
+          I'm currently seeking a position as a <strong>full-stack developer</strong>, in a modern, forward-thinking, and innovative organization where I can <strong>learn</strong> new skills, <strong>grow</strong> as a developer, and make meaningful contributions in a <strong>team environment</strong>. 
+          My greatest strengths as a developer are in <strong>front-end design</strong>  and frameworks, such as Wordpress, Bootstrap, HTML5, CSS3, LESS, and SASS. 
+          I'm most interested in increasing my skills as a <strong>back-end engineer</strong> in languages or technologies like Ruby, RSpec, GIT, Angular/Node, AJAX, JS, APIs, and MYSQL.
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="banner-fade">
+
+        <ul class="bjqs">
+          <li><img src="kitten1.jpg" title="This kitty loves to LOL."></li>
+          <li><img src="kitten2.jpg" title="Meow meow meow meow."></li>
+          <li><img src="kitten3.jpg" title="I'm definitely a cat."></li>
+        </ul>
+
+      </div>
+
+      <script>
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+            height      : 350,
+            width       : 620,
+            responsive  : true
+          });
+
+        });
+      </script>
+
+      <footer>
+        <ul class="contact">
+          <li><a href="mailto:info@brownborgstudios.com" title="Email Andrew"><i class="fa fa-lg fa-envelope"></i></a></li>
+          <li><a href="http://github.com/andrewborstein" target="_blank" title="Github Profile"><i class="fa fa-lg fa-github"></i></a></li>
+          <li><a href="http://linkedin.com/in/andrewborstein" target="_blank" title="LinkedIn Profile"><i class="fa fa-lg fa-linkedin"></i></a></li>
+          <li><a href="http://andrewborstein.com/resume" target="_blank" title="Resume"><i class="fa fa-lg fa-user"></i></a></li>
+          <li><a href="http://brownborgstudios.com/" target="_blank" title="Brownborg Studios"><i class="fa fa-lg fa-globe"></i></a></li>
+        </ul>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
